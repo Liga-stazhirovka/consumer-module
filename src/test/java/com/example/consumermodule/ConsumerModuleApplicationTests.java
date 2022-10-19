@@ -9,5 +9,4 @@ class ConsumerModuleApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }

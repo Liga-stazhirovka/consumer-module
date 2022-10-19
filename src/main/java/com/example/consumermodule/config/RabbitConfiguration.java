@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfiguration {
     public static final String HOST = "localhost";
-    public static final String QUEUE_NAME = "common_monitoring";
 
     @Bean
     public ConnectionFactory connectionFactory() {
