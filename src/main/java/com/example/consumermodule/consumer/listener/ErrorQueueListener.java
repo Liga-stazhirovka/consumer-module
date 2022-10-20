@@ -17,7 +17,6 @@ public class ErrorQueueListener implements QueueListener {
     @Override
     @RabbitListener(queues = ERROR_QUEUE)
     public void listenQueue(MessageConsumer message) {
-        System.out.println("IN ERROR RABBIT");
         MessageDto messageDto = MessageDto.builder()
                 .status(message.getStatus())
                 .message(message.getMessage())

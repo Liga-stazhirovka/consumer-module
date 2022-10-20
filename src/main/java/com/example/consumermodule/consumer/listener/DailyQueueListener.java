@@ -17,7 +17,6 @@ public class DailyQueueListener implements QueueListener {
     @Override
     @RabbitListener(queues = DAILY_QUEUE)
     public void listenQueue(MessageConsumer message) {
-        System.out.println("IN DAILY RABBIT");
         MessageDto messageDto = MessageDto.builder()
                 .status(message.getStatus())
                 .message(message.getMessage())

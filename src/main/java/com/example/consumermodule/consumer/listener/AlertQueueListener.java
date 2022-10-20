@@ -18,7 +18,6 @@ public class AlertQueueListener implements QueueListener {
     @Override
     @RabbitListener(queues = ALERT_QUEUE)
     public void listenQueue(MessageConsumer message) {
-        System.out.println("IN ALERT RABBIT");
         MessageDto messageDto = MessageDto.builder()
                 .status(message.getStatus())
                 .message(message.getMessage())
